@@ -15,7 +15,7 @@ def readt(name):
 def word_jieba(name):
     jieba.analyse.set_stop_words("stopword.txt")
     word=jieba.cut(name)
-    result=jieba.analyse.extract_tags("".join(word),topK=50)
+    result=jieba.analyse.extract_tags("".join(word),topK=45)
     return result
 def jaccard(name1,name2):
     word1=word_jieba(readt(name1))
